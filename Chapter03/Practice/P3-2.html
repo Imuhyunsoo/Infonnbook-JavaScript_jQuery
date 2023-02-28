@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result"></div>
+<script>
+
+    /***
+     * 연습문제 3-2 물의 온도를 나태는 단위(섭씨 또는 화씨)와 온도를 입력받아 
+     *            섭씨 온도에 따라 물 상태를 판별하는 프로그램을 작성하시오.
+     * 
+     * 화씨/섭씨 온도 환산식
+     * 섭시 = (화씨 - 32) x 5/9
+     * 
+     * 물의 상태
+     * 섭씨 온도 100도 이상 : 기체
+     * 섭씨 온도 0도 초과 ~ 100도 미만 : 액체
+     * 섭씨 온도 0도 이하 : 고체
+     ***/
+
+    var unit = Number(prompt("온도 단위를 입력해 주세요(1:섭씨, 2:화씨)."));
+    var temperature = Number(prompt("온도를 입력해 주세요."));
+    var state;
+
+    if (unit == 2) {
+        temperature = (temperature - 32) * 5 / 9;
+    }
+    if (temperature >= 100) {
+        state = "기체";
+    }
+    else if (temperature > 0 && temperature < 100) {
+        state = "액체";
+    }
+    else {
+        state = "고체";
+    }
+    
+    
+    var message = "물의 섭씨 온도 : " + temperature + "도<br>";
+    message += "물의 상태는 " + state + "입니다.";
+
+    document.getElementById("result").innerHTML = message;
+</script>
+</body>
+</html>

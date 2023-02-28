@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result"></div>
+<script>
+
+    /***
+     * 연습문제 3-2 키와 몸무게를 입력받아 다이어트 유무를 판정하는 프로그램을 작성하시오.
+     * 
+     * 판정 기준
+     * std = (키 - 100) * 0.9
+     * 
+     * 출력 메세지
+     * 몸무게가 std 보다 큰 경우
+     * '다이어트가 필요할 수 있습니다!'를 화면에 출력
+     * 그렇지 않은 경우
+     * '표준(또는 마른) 체형입니다!'를 화면에 출력
+     ***/
+
+    var height = Number(prompt("키를 입력해 주세요."));
+    var weight = Number(prompt("몸무게를 입력해 주세요."));
+    var std = (height - 100) * 0.9;
+    var feedback;
+
+    if (weight > std) {
+        feedback = "다이어트가 필요할 수 있습니다!"
+    }
+    else {
+        feedback = "표준(또는 마른) 체형입니다!"
+    }
+    
+    var message = "키 : " + height + "cm<br>";
+    message += "몸무게 : " + weight + "kg<br>";
+    message += feedback;
+
+    document.getElementById("result").innerHTML = message;
+</script>
+</body>
+</html>

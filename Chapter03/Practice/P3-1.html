@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result"></div>
+<script>
+
+    /***
+     * 연습문제 3-1 물건 구매가를 입력받아 할인율에 따라 지불 금액을 계산하는 프로그램을 작성하시오.
+     * 
+     * 할인율
+     * 10000원 이상 ~ 50000원 미만 : 5%
+     * 50000원 이상 ~ 300000원 미만 : 7.5%
+     * 300000원 이상 : 10%
+     * 
+     * 할인 금액
+     * 할인 금액 = 구매 금액 x (할인율 / 100)
+     ***/
+
+    var buy_pay = Number(prompt("구매 금액을 입력해 주세요."));
+    var discount_rate = 0;
+    var discount_pay = 0;
+    var price = 0;
+
+    if (buy_pay >= 10000 && buy_pay < 50000) {
+        discount_rate = 0.05 * 100;
+        discount_pay = buy_pay * 0.05;
+        price = buy_pay - discount_pay;
+    }
+    else if (buy_pay >= 50000 && buy_pay < 300000) {
+        discount_rate = 0.075 * 100;
+        discount_pay = buy_pay * 0.075;
+        price = buy_pay - discount_pay;
+    }
+    else {
+        discount_rate = 0.1 * 100;
+        discount_pay = buy_pay * 0.1;
+        price = buy_pay - discount_pay;
+    }
+
+    var message = "- 구매 금액 : " + buy_pay + "원<br>";
+    message += "- 할인율 : " + discount_rate + "%<br>";
+    message += "- 할인 금액 : " + discount_pay + "원<br>";
+    message += "지불 금액은 : " + price + "원입니다.";
+
+    document.getElementById("result").innerHTML = message;
+</script>
+</body>
+</html>
