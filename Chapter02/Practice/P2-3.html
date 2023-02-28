@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+    /***
+     * 연습문제 2-３　다음은 할당 연산자에 관한 프로그램이다. 프로그램의 실행 결과는?
+     * 실행 결과 : 30
+     * 해설 : a에서 기존값 3에서 += 연산이 되어 기존값 + 2 가 되어 5가 되고, 
+     *       b는 기존값 4에서 %= 연산이 되어 기존값 4에 2를 나눈 나머지값이 들어가서 0이 되고,
+     *       c는 기존값 5에서 *= 연산이 되어 기존값 5에 5를 곱한값이 들어가서 25가 된다.
+     *       최종 연산으로 5 + 0 + 25로 d에는 30값이 들어가서 출력이 된다.
+     ***/
+
+    var a = 3;
+    var b = 4;
+    var c = 5;
+    var d;
+    a += 2;
+    b %= 2;
+    c *= 5;
+
+    d = a + b + c;
+    document.write(d)
+</script>
+</body>
+</html>
