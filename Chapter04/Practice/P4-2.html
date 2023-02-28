@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result"></div>
+<script>
+
+    /***
+     * 연습문제 4-2 1번과 동일한 프로그램을 while문을 이용하여 프로그램을 작성하시오.
+     * 웹 브라우저 실행 결과는 1번의 결과와 동일함.
+     ***/
+
+    var celsius = 0;
+    var contents = "--------------------<br>";
+    contents += "섭씨 화씨<br>";
+    contents += "--------------------<br>";
+
+    while (celsius <= 30) {
+        contents += celsius + "&nbsp;&nbsp;&nbsp;" + (celsius * 9/5 + 32) + "<br>";
+        celsius += 5;
+    }
+    contents += "--------------------";
+
+    document.getElementById("result").innerHTML = contents;
+</script>
+</body>
+</html>

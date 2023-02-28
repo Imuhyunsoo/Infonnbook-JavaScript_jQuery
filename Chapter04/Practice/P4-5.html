@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result"></div>
+<script>
+
+    /***
+     * 연습문제 4-5 for문을 이용하여 무게 단위 환산표를 만드는 프로그램을 작성하시오.
+     * 
+     * 무게 단위 환산식
+     * 그램 = 킬로그램 x 1000;
+     * 파운드 = 킬로그램 x 2.204623;
+     * 온스 = 킬로그램 x 35.273962;
+     ***/
+
+    var contents;
+    var kg, g, lbs, oz;
+
+    contents = "<h3>무게 단위 환산표</h3>";
+    contents += "<table border='1'>";
+    contents += "<tr><th>킬로그램</th><th>그램</th>";
+    contents += "<th>파운드</th><th>온스</th></tr>";
+
+    for (kg = 1; kg <= 9; kg+=2) {
+        g = kg * 1000;
+        lbs = kg * 2.204623;
+        oz = kg * 35.273962;
+
+        lbs = lbs.toFixed(2);
+        oz = oz.toFixed(2);
+
+        contents += "<tr>";
+        contents += "<td >" + kg + "</td>";
+        contents += "<td>" + g + "</td>";
+        contents += "<td>" + lbs + "</td>";
+        contents += "<td>" + oz + "</td>";
+        contents += "</tr>"
+    }
+    contents += "</table>";
+
+    document.getElementById("result").innerHTML = contents;
+</script>
+</body>
+</html>
