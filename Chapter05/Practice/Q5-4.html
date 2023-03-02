@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    function sum_avg(kor, eng, math) {
+        var sum, avg;
+
+        sum = kor + eng + math;
+        avg = sum / 3;
+
+        document.getElementById("kor").innerHTML = kor;
+        document.getElementById("eng").innerHTML = eng;
+        document.getElementById("math").innerHTML = math;
+        document.getElementById("sum").innerHTML = sum;
+        document.getElementById("avg").innerHTML = avg;
+    }
+</script>
+</head>
+<body>
+    <div style="border: solid 1px gray; padding: 10px; margin-bottom: 10px;">
+        - 국어 : <span id="kor"></span>점<br>
+        - 영어 : <span id="eng"></span>점<br>
+        - 수학 : <span id="math"></span>점<br><br>
+        ■ 합게 : <span id="sum"></span>점<br>
+        ■ 평균 : <span id="avg"></span>점
+    </div>
+    <button onclick="sum_avg(80, 90, 100)">세 과묵 성적 합계/평균 구하기</button>
+</body>
+</html>

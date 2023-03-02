@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    function get_area(r) {
+        result = r * r * 3.14;
+        return result;
+    }
+
+    function get_length(r) {
+        result = r * 2 * 3.14;
+        return result;
+    }
+
+    var radius = 30;   // 반지름
+    var area;          // 원으 넓이
+    var length;        // 원의 둘레
+
+    area = get_area(radius);
+    length = get_length(radius);
+
+    document.write("반지름 : " + radius + "<br>");
+    document.write("원의 넓이 : " + area + "<br>");
+    document.write("원의 둘레 : " + length);
+</script>
+</head>
+<body>
+    
+</body>
+</html>

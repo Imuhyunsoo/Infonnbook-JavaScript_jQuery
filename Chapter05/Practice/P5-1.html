@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+
+    /***
+     * 연습문제 5-1 다음은 지역 변수와 전역 변수에 관련됭 문제이다. 다음 프로그램의 실행 결과는 무엇인가?
+     * 실행 결과 : 30, 20
+     * 해설 : 첫번째 출력은 함수를 실행하여 사용자 함수 내의 있는 지역변수 x(20 + 10)를 이용하여 출력한 결과이고,
+     *       두번째 출력 결과는 전역 변수 x(10 * 2)의 연산을 출력한 결과이다.
+     ***/
+
+    function func() {
+        var x = 20;
+        x += 10;
+        document.write(x + "<br>");
+    }
+
+    var x = 10;
+
+    func();
+    x *- 2;
+    document.write(x + "<br>");
+</script>
+</head>
+<body>
+    
+</body>
+</html>

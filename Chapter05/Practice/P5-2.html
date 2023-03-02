@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+
+    /***
+     * 연습문제 5-2 다음은 사용자 함수를 이용하여 책 값, 할인율, 배송료를 입력받아 지불 금액을 계산하는 프로그램이다. 
+     *            빈박스를 채워 프로그램을 완성하시오.
+     * 지불 금액 = 책값 - (책값 * 할인율/100) + 배송료
+     ***/
+
+    function get_pay(price, discount, shipping) {
+        var money;
+        money = price - (price * discount/100) + shipping;
+        return money;
+    }
+
+        var price = 25000;     // 책값
+        var discount = 10;     // 할인율(%)
+        var shipping = 5000;   // 배송료
+        var pay;               // 결제 금액
+
+        pay = get_pay(price, discount, shipping);
+        document.write("책 값 : " + price + "원<br>");
+        document.write("할인율 : " + discount + "%<br>");
+        document.write("배송료 : " + shipping + "원<br><br>");
+        document.write("- 결제 금액 : " + pay + "원<br>");
+    
+</script>
+</head>
+<body>
+    
+</body>
+</html>

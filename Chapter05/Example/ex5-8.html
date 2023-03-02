@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    function func() {
+        var x = 20;               // 변수 x는 지역 변수
+        document.write(x + "<br>");
+    }
+
+    var x = 10;                   // 변수 x는 전역 변수
+
+    func();                       // func() 함수 호출
+    document.write(x + "<br>");   
+</script>
+</head>
+<body>
+    
+</body>
+</html>
