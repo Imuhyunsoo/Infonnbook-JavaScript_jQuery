@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+    /***
+     * 연습문제 7-1 다음은 Number 객체의 메소드를 이용하여 실수의 소수점 이하 자리수를 구하는 프로그램이다. 
+     *            실행 결과는 무엇인가?
+     * 실행 결과 : -35, -35.3, -35.267
+     * 해설 : 첫번째 출력은 0번째 짜리까지 출력이여서 -35이고 두번째 출력은 1번째 짜리까지 출력이라 2번째자리인 6을
+     *       반올림하여 출력이 되어 -35.3이다. 마지막으로 3번째 자리까지 출력인 값은 -35.257이다.
+     ***/
+
+    var x = - 35.267058;
+
+    document.write(x.toFixed(0) + "<br>");
+    document.write(x.toFixed(1) + "<br>");
+    document.write(x.toFixed(3));
+</script>
+</body>
+</html>
