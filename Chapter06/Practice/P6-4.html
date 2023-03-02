@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+
+    /***
+     * 연습문제 6-2 웹 페이지에서 '새 창 열기' 버튼을 하나 만들고 그 버튼을 클릭했을 때,
+     *            다음과 같은 조건으로 새 창을 여는 프로그램을 작성하시오.
+     * 
+     * 새 창을 열 때 조건
+     * 새 창에 들어갈 HTML 파일 이름 : popup.html
+     * 새 창 이름 : myWin
+     * 새 창 너비 : 500px
+     * 새 창 높이 : 500px
+     * 스크롤 바 : 없음
+     ***/
+
+    function openWin() {
+        window.open("../Example/popup.html", "myWin", 
+        "width=500, height=500, scrollbars=no");
+    }
+</script>
+</head>
+<body>
+    <button onclick="openWin()">새 창 열기</button>
+</body>
+</html>

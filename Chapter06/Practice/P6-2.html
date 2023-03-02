@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+
+    /***
+     * 연습문제 6-2 다음은 생성자 함수를 이용하여 객체를 생성한 다음 출력하는 프로그램이다. 
+     *            빈 박스를 채워 프로그램을 완성하시오.
+     ***/
+
+    function Employee(name, age, position, salary) {
+        this.name = name;
+        this.position = position;
+        this.age = age;
+        this.salary = salary;
+    }
+
+    var person1 = new Employee("안진수", 52, "부장", 5000000);
+    var person2 = new Employee("홍지영", 28, "사원", 3000000);
+
+    var list = "";
+    list += "1 ." + person1.name + " : ";
+    list += person1.position + ", " ;
+    list += person1.age + ", ";
+    list += person1.salary;
+    list += "<br>"
+
+    list += "2 ." + person2.name + " : ";
+    list += person2.position + ", " ;
+    list += person2.age + ", ";
+    list += person2.salary;  
+    
+    document.write(list);
+</script>
+</head>
+<body>
+    
+</body>
+</html>
