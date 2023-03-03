@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>
+
+        /***
+        * 연습문제 8-1 다음은 제이쿼리 메소드를 이용하여 페이지 요소에 내용을 삽입하는 프로그램이다.
+        *            빈 박스를 채워 프로그램을 완성하시오.
+        ***/
+
+        $(document).ready(function() {
+            $("#div1").text("안녕하세요");
+
+            $("#div2").html("<span style-'background-color:yellow'>반갑습니다.</span>");
+
+            $("#email").val("test@korea.com");
+        });
+    </script>
+</head>
+<body>
+    <div id="div1"> </div>
+    <div id="div2"> </div>
+    <div><input type="text" id="email"></div>
+</body>
+</html>
